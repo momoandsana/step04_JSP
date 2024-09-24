@@ -28,7 +28,7 @@ getCreationTime = <%=session.getCreationTime()%><br>
   getLastAccessedTime = <%=session.getLastAccessedTime()%></h3>
 
 <%
-  //세션 영역에 정보를 저장해보자(서버측에 저장)
+  //세션 영역에 정보를 저장해보자(서버측에 저장), 값을 입력 받는 것이 아니라 그냥 하드코딩
   session.setAttribute("name","희정");
   session.setAttribute("id","jang");
   session.setAttribute("hobbies",new String[]{"등산","수영","낚시"}); // 서버 어딘가에 저장함
@@ -39,7 +39,12 @@ getCreationTime = <%=session.getCreationTime()%><br>
 취미 : <%=session.getAttribute("hobbies")%><br>
 
 <a href="sessionGet.jsp">jsp로 이동</a><br>
+<%--상대경로로 이동한다. sessionGet 파일은 현재 파일과 같은 경로(폴더)에 있으므로 상대경로로 표현 "/" 사용하지 않는다--%>
 <a href="${pageContext.request.contextPath}/sessionServlet">servlet 이동</a>
+<%--여기서 자바 코드로 포워딩하거나 리다이렉트해서 데이터를 전송하지 않기 때문에 reques.setAtrribute()해서 데이터를 전송하지 않고--%>
+<%--session 에 데이터를 담았다--%>
+<%--여기서 href로 이동하면 별개의 요처이기 때문에 request.setAttribute해도 데이터는 담기지 않는다--%>
+<%--a href 는 url를 변경한다--%>
 
 </body>
 </html>

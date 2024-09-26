@@ -43,8 +43,9 @@ getCreationTime = <%=session.getCreationTime()%><br>
 <a href="${pageContext.request.contextPath}/sessionServlet">servlet 이동</a>
 <%--여기서 자바 코드로 포워딩하거나 리다이렉트해서 데이터를 전송하지 않기 때문에 reques.setAtrribute()해서 데이터를 전송하지 않고--%>
 <%--session 에 데이터를 담았다--%>
-<%--여기서 href로 이동하면 별개의 요처이기 때문에 request.setAttribute해도 데이터는 담기지 않는다--%>
+<%--여기서 href로 이동하면 별개의 요청이기 때문에 request.setAttribute해도 데이터는 담기지 않는다, 리다이렉션임--%>
 <%--a href 는 url를 변경한다--%>
+<%-- webapp/sessionServlet과 같다--%>
 
 </body>
 </html>

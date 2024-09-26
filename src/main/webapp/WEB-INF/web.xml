@@ -9,4 +9,20 @@
   <!-- EL을 무시하지 않도록 설정 -->
   <el-ignored>false</el-ignored>
 
+<!--  필터등록-->
+  <filter>
+    <filter-name>sampleFilter</filter-name>
+    <filter-class>ex0926_filter.SampleFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>sampleFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+<!--    <url-pattern>*.jsp</url-pattern>-->
+
+
+<!--    <url-pattern>/test01.jsp</url-pattern>-->
+<!--    <url-pattern>/test02.jsp</url-pattern>-->
+<!--    <url-pattern>/test</url-pattern>-->
+  </filter-mapping>
 </web-app>

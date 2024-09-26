@@ -20,5 +20,6 @@
 <h3>이동해보자</h3>
 <a href="<%= application.getContextPath() %>/session/sessionGet.jsp">/session/sessionGet.jsp</a><br>
 <a href="<%= application.getContextPath() %>/sessionServlet">서블릿</a>
+<%-- ${pageContext.request.contextPath}/sessionServlet 과 같은 효과 --%>
 </body>
 </html>

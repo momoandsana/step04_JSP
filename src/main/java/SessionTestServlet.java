@@ -66,6 +66,10 @@ public class SessionTestServlet extends HttpServlet {
         /*
         리다이렉션은 response 로 클라이언트에게 응답하고
         포워딩은 request 를 서버 내부의 다른 코드로 보낸다
+
+        포워딩, 리다이렉션 우
+        서블릿->서블릿 url 패턴 주소
+        서블릿->jsp webapp 기준 주소
          */
 
 
